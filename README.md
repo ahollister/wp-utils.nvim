@@ -18,7 +18,7 @@ use("ahollister/wp-utils.nvim")
 You will need to call the setup function for the plugin to work, but there are no setup options required:
 
 ```
-require("phpcbf").setup()
+require("wp-utils").setup()
 ```
 
 ## Commands
