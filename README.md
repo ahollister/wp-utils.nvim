@@ -37,13 +37,13 @@ require("wp-utils").setup()
 
 Here's an example of the use case I wrote this plugin for.
 
-I have a plugin for running the PHPCBF command on save, which can take an absolute path for the executable as a setup option and an optional ruleset.
+I have a [plugin for running the phpcbf command](https://github.com/ahollister/phpcbf.nvim) on save, which can take an absolute path for the executable as a setup option and an optional ruleset.
 
 In WP installs I have a composer setup that handles the ruleset and provides the phpcbf script at: `WP_ROOT/vendor/bin/phpcbf`
 
-Therefore I can use the commands provided by WP-Utils to determine the options passed to the PHPCBF plugin.
+Therefore I can use the commands provided by WP-Utils to determine the options passed to the PHPCBF.nvim plugin.
 
-This is what that configuration for PHPCBF looks like, making use of WP-Utils:
+This is what that configuration looks like, providing different options for WP vs other php environments:
 
 ```
 local is_wp = require("wp-utils.utils").is_wp()
@@ -66,4 +66,4 @@ end
 require("phpcbf").setup(settings)
 ```
 
-Now my PHPCBF plugin is configured to use the phpcbf script local to the WP install, or fall back to more generic settings (and a global phpcbf executable) if the current buffer is not part of a WP project.
+Now the PHPCBF.nvim plugin is configured to use the phpcbf script local to the WP install, or fall back to more generic settings (and a global phpcbf executable) if the current buffer is not part of a WP project.
