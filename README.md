@@ -15,22 +15,29 @@ use("ahollister/wp-utils.nvim")
 ## Setup
 ---
 
-You will need to call the setup function for the plugin to work, but there are no setup options required:
+To install the commands you'll need to require wp-utils somewhere in your config:
 
 ```
-require("wp-utils").setup()
+require("wp-utils")
 ```
+
+To use a command elsewhere in your lua config you can call them directly from wp-utils.utils:
+
+```
+local is_wp = require("wp-utils.utils").is_wp()
+```
+
 
 ## Commands
 ---
 
-`:WP is_wp()` - Returns true if the current working directory is part of a WP install.
+`:WP is_wp` - Returns true if the current working directory is part of a WP install.
 
-`:WP get_wp_path()` - Returns the path to the root of the WP install.
+`:WP get_wp_path` - Returns the path to the root of the WP install.
 
-`:WP is_wp_root()` - Returns true if the current working directory is the root of a WP install.
+`:WP is_wp_root` - Returns true if the current working directory is the root of a WP install.
 
-`:WP is_wp_subdirectory()` - Returns true if the current working directory is a subdirectory of a WP install.
+`:WP is_wp_subdirectory` - Returns true if the current working directory is a subdirectory of a WP install.
 
 ## Use case
 ---
