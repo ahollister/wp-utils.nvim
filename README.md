@@ -24,7 +24,11 @@ require("wp-utils").setup()
 To use a command elsewhere in your lua config you can call it as a lua function directly from wp-utils.utils:
 
 ```
-local is_wp = require("wp-utils.utils").is_wp()
+local wp = require("wp-utils.utils")
+local is_wp = wp.is_wp()
+local is_wp_root = wp.is_wp_root()
+local is_wp_subdirectory = wp.is_wp_subdirectory()
+local get_wp_path = wp.get_wp_path()
 ```
 
 
