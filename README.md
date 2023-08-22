@@ -57,8 +57,9 @@ Therefore I can use the commands provided by WP-Utils to determine the options p
 This is what that configuration looks like, providing different options for WP vs other php environments:
 
 ```
-local is_wp = require("wp-utils.utils").is_wp()
-local wp_path = require("wp-utils.utils").get_wp_path()
+local wp = require("wp-utils.utils")
+local is_wp = wp.is_wp()
+local wp_path = wp.get_wp_path()
 
 -- Generic PHPCBF settings
 local settings = {
