@@ -37,11 +37,11 @@ local get_wp_path = wp.get_wp_path()
 
 `:WP is_wp` - Returns true if the current working directory is part of a WP install.
 
-`:WP get_wp_path` - Returns the path to the root of the WP install.
-
 `:WP is_wp_root` - Returns true if the current working directory is the root of a WP install.
 
 `:WP is_wp_subdirectory` - Returns true if the current working directory is a subdirectory of a WP install.
+
+`:WP get_wp_path` - Returns the path to the root of the WP install.
 
 ## Use case
 ---
