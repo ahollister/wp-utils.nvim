@@ -15,13 +15,13 @@ use("ahollister/wp-utils.nvim")
 ## Setup
 ---
 
-To install the commands you'll need to require wp-utils somewhere in your config:
+To install the user commands you'll need to run the setup function in your config:
 
 ```
-require("wp-utils")
+require("wp-utils").setup()
 ```
 
-To use a command elsewhere in your lua config you can call them directly from wp-utils.utils:
+To use a command elsewhere in your lua config you can call it as a lua function directly from wp-utils.utils:
 
 ```
 local is_wp = require("wp-utils.utils").is_wp()
