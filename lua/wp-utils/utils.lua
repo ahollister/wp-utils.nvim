@@ -27,7 +27,7 @@ function utils.is_wp_subdirectory()
 	return false
 end
 
--- Does the current directory contain a wp-content directory?
+-- Does the current directory contain a wp-content / wp-includes / or wp-admin directory in its path?
 function utils.is_wp_root()
 	if utils.cwd_has_wp_content or utils.cwd_has_wp_includes or utils.cwd_has_wp_admin then
 		return true
