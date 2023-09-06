@@ -5,10 +5,20 @@ wp.setup = function()
 	require("wp-utils.command").create_command()
 end
 
--- Provide builtin functions to lua via require("wp-utils")
-wp.is_wp = builtin.is_wp
-wp.is_wp_root = builtin.is_wp_root
-wp.is_wp_subdirectory = builtin.is_wp_subdirectory
-wp.get_wp_path = builtin.get_wp_path
+wp.is_wp = function()
+	return builtin.is_wp()
+end
+
+wp.is_wp_subdirectory = function()
+	return builtin.is_wp_subdirectory()
+end
+
+wp.is_wp_root = function()
+	return builtin.is_wp_root()
+end
+
+wp.get_wp_path = function()
+	return builtin.get_wp_path()
+end
 
 return wp
